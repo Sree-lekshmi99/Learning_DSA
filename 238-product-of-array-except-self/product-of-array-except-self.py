@@ -10,13 +10,13 @@ class Solution:
 
         suffix = 1
         for i in range(len(nums)-1,-1,-1):
-            ans2[i] = suffix
+            ans[i] *= suffix
             suffix*=nums[i]
-        print(ans2)
-
-        for i in range(len(nums)):
-            ans[i] = ans[i]*ans2[i]
         return ans
+
+        # for i in range(len(nums)):
+        #     ans[i] = ans[i]*ans2[i]
+        # return ans
 
             
         

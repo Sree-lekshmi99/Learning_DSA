@@ -4,13 +4,16 @@ class Solution:
         buy = 0
         profit = 0
         while sell<len(prices):
-            if prices[sell]> prices[buy]:
-                profit += prices[sell]- prices[buy]
+            if prices[sell]>= prices[buy]:
+                profit += prices[sell] - prices[buy] 
                 sell+=1
                 buy+=1
-            else:
-                buy+=1
+              
+            elif prices[buy]> prices[sell]:
+                buy = sell
                 sell+=1
-        return profit
+            
+        return profit if profit else 0
+
 
         

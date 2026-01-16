@@ -3,9 +3,8 @@ class Solution:
         l = 0
         r = len(height)-1
         max_area = 0
-        while l<r:
+        while l<=r:
             max_area = max(max_area, (r-l) * min(height[l],height[r]))
-            print(max_area)
             if height[l] < height[r]:
                 l+=1
             else:

@@ -6,8 +6,9 @@ class Solution:
         arr.sort()
         for i in range(len(arr)-1):
             diff = abs(arr[i+1] - arr[i])
-            min_diff = min(min_diff, diff)
-        for i in range(len(arr)-1):
+            if diff < min_diff:
+                min_diff = diff
+                pairs = []
             if min_diff == abs(arr[i+1] - arr[i]):
                 pairs.append([arr[i],arr[i+1]])
         return pairs

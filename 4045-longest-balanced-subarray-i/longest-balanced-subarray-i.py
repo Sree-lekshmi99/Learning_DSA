@@ -27,36 +27,4 @@ class Solution:
                     ans = max(ans, j - i + 1)
 
         return ans        # right = 1
-        n = len(nums)
-        max_length = 0
-        
-
-        for i in range(len(nums)):
-            even = set()
-            odd = set()
-            if nums[i]%2==0:
-                even.add(nums[i])
-            elif nums[i]%2!=0:
-                odd.add(nums[i])
-
-        print(even)
-        print(len(even))
-        for r in range(len(nums)):
-            if len(odd) == len(even):
-                max_length = max(max_length , r-l+1)
-            else:
-                if nums[l] in odd:
-                    odd.remove(nums[l])
-                else:
-                    even.remove(nums[l])
-                l+=1
-
-        return max_length
-
-        #     if even == odd:
-        #        max_length = max(max_length(r-l+1))
-        #     elif even!= odd:
-        #         l+=1 
-        # return max_length
-
-
+      

@@ -12,12 +12,6 @@ class Solution:
                 return False
             map1[p] = w
             map2[w] = p
-
-            #     map1[pattern[i]] = word[i]
-            #     print(map1)
-            # elif pattern[i] in map1 or word[i] in map1:
-            #     if map1[pattern[i]] != word[i]:
-            #         return False
         return True
                     
         

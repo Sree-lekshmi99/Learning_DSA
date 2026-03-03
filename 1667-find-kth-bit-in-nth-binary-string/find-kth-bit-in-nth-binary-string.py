@@ -1,21 +1,14 @@
 class Solution:
     def findKthBit(self, n: int, k: int) -> str:
-        ans = ''
-        res= ''
-        invert = ''
-        s = [0]*(n+1)
-        for i in range(1, n+1):
-            # temp = format(i,"b")
-            prev = str(s[i-1])
-            
-            invert = "".join('1' if x =='0' else '0' for x in prev)
-            
-            ans = prev + '1'+ invert[::-1]
-            s[i] = str(ans)
-            
 
-        return s[n][k-1]
-
-
-
+        flag = False
+        while n>1:
+            mid = 2**(n-1)
+            if k == mid:
+                return '0' if flag else '1'
+            elif k>mid:
+                k = 2**n - k
+                flag = not flag
+            n-=1
+        return '1' if flag else '0'
         

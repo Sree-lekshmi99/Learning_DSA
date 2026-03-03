@@ -6,12 +6,11 @@ class Solution:
         s = [0]*(n+1)
         for i in range(1, n+1):
             temp = format(i,"b")
-            prev = s[i-1]
+            prev = str(s[i-1])
             
-            invert = "".join('1' if x =='0' else '0' for x in str(prev))
-            # print(invert)
+            invert = "".join('1' if x =='0' else '0' for x in prev)
             
-            ans = str(prev) + '1'+ invert[::-1]
+            ans = prev + '1'+ invert[::-1]
             s[i] = str(ans)
             
 

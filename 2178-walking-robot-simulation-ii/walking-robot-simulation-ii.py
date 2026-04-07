@@ -6,7 +6,7 @@ class Robot:
         self.moved = False
         self.toDir = {0: "East", 1: "North", 2: "West", 3: "South"}
         
-        # Pre-calculate boundary
+
         for i in range(width):
             self.pos.append([i, 0])
             self.dir.append(0)
